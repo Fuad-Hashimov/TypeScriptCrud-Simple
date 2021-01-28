@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var Product_1 = require("./Product");
+var ProductRepository_1 = require("./ProductRepository");
+var productRepository = new ProductRepository_1.ProductRepository();
+var result;
+result = productRepository.getByIdProduct(2);
+var pro = new Product_1.Product();
+pro.Name = "Test";
+pro.Price = 3500;
+var p = new Product_1.Product();
+p.Id = 5;
+p.Name = "Update";
+p.Price = 50;
+productRepository.saveProduct(p);
+//productRepository.removeProduct(result);
+result = productRepository.getAllProduct();
+console.log(result);
